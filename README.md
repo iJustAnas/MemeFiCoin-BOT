@@ -3,69 +3,68 @@
 
 ![img1](.github/images/demo.png)
 
-> 🇪🇳 README in english available [here](README-EN.md)
+> 🇷🇺 README на русском доступен [здесь](README.md)
 
-## Функционал  
-| Функционал                                                     | Поддерживается  |
-|----------------------------------------------------------------|:---------------:|
-| Многопоточность                                                |        ✅        |
-| Привязка прокси к сессии                                       |        ✅        |
-| Авто-покупка предметов при наличии монет (tap, energy, charge) |        ✅        |
-| Рандомное время сна между кликами                              |        ✅        |
-| Рандомное количество кликов за запрос                          |        ✅        |
-| Поддержка tdata / pyrogram .session / telethon .session        |        ✅        |
+## Functionality
+| Functional                                                     | Supported |
+|----------------------------------------------------------------|:---------:|
+| Multithreading                                                 |     ✅     |
+| Binding a proxy to a session                                   |     ✅     |
+| Auto-purchase of items if you have coins (tap, energy, charge) |     ✅     |
+| Random sleep time between clicks                               |     ✅     |
+| Random number of clicks per request                            |     ✅     |
+| Support tdata / pyrogram .session / telethon .session          |     ✅     |
 
+## [Settings](https://github.com/shamhi/MemeFiBot/blob/main/.env-example)
+| Настройка                | Описание                                                                                                                   |
+|--------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| **API_ID / API_HASH**    | Platform data from which to launch a Telegram session (stock - Android)                                                    |
+| **MIN_AVAILABLE_ENERGY** | Minimum amount of available energy, upon reaching which there will be a delay (eg 100)                                     |
+| **SLEEP_BY_MIN_ENERGY**  | Delay when reaching minimum energy in seconds (eg [1800,3600])                                                             |
+| **ADD_TAPS_ON_TURBO**    | How many taps will be added when turbo is activated (eg 2500)                                                              |
+| **AUTO_UPGRADE_TAP**     | Improve the tap boost  (True / False)                                                                                      |
+| **MAX_TAP_LEVEL**        | Maximum level of tap boost (eg 5)                                                                                          |
+| **AUTO_UPGRADE_ENERGY**  | Upgrade the energy boost (True / False)                                                                                    |
+| **MAX_ENERGY_LEVEL**     | Maximum level of energy boost (eg 5)                                                                                       |
+| **AUTO_UPGRADE_CHARGE**  | Upgrade the charge boost (True / False)                                                                                    |
+| **MAX_CHARGE_LEVEL**     | Maximum level of charge boost (eg 5)                                                                                       |
+| **APPLY_DAILY_ENERGY**   | Use the daily free energy boost (True / False)                                                                             |
+| **APPLY_DAILY_TURBO**    | Use the daily free turbo boost (True / False)                                                                              |
+| **RANDOM_CLICKS_COUNT**  | Random number of taps (eg [50,200])                                                                                        |
+| **SLEEP_BETWEEN_TAP**    | Random delay between taps in seconds (eg [10,25])                                                                          |
+| **USE_PROXY_FROM_FILE**  | Whether to use proxy from the `bot/config/proxies.txt` file (True / False)                                                 |
+| **USE_TAP_BOT**          | Use the tap-bot (True / False) (eg [10,25])                                                                                |
+| **EMERGENCY_STOP**       | Use an emergency stop (True / False), if True - in case of a stop bot protocol error, so as not to get banned (eg [10,25]) |
 
-## [Настройки](https://github.com/shamhi/MemeFiBot/blob/main/.env-example)
-| Настройка                | Описание                                                                                                      |
-|--------------------------|---------------------------------------------------------------------------------------------------------------|
-| **API_ID / API_HASH**    | Данные платформы, с которой запускать сессию Telegram (сток - Android)                                        |
-| **MIN_AVAILABLE_ENERGY** | Минимальное количество доступной энергии, при достижении которой будет задержка (напр. 100)                   |
-| **SLEEP_BY_MIN_ENERGY**  | Задержка при достижении минимальной энергии в секундах (напр. [1800,3600])                                    |
-| **ADD_TAPS_ON_TURBO**    | Сколько тапов будет добавлено при активации турбо (напр. 2500)                                                |
-| **AUTO_UPGRADE_TAP**     | Улучшать ли тап (True / False)                                                                                |
-| **MAX_TAP_LEVEL**        | Максимальный уровень прокачки тапа (напр. 5)                                                                  |
-| **AUTO_UPGRADE_ENERGY**  | Улучшать ли энергию (True / False)                                                                            |
-| **MAX_ENERGY_LEVEL**     | Максимальный уровень прокачки энергии (напр. 5)                                                               |
-| **AUTO_UPGRADE_CHARGE**  | Улучшать ли заряд энергии (True / False)                                                                      |
-| **MAX_CHARGE_LEVEL**     | Максимальный уровень прокачки заряда энергии (напр. 5)                                                        |
-| **APPLY_DAILY_ENERGY**   | Использовать ли ежедневный бесплатный буст энергии (True / False)                                             |
-| **APPLY_DAILY_TURBO**    | Использовать ли ежедневный бесплатный буст турбо (True / False)                                               |
-| **RANDOM_CLICKS_COUNT**  | Рандомное количество тапов (напр. [50,200])                                                                   |
-| **SLEEP_BETWEEN_TAP**    | Рандомная задержка между тапами в секундах (напр. [10,25])                                                    |
-| **USE_PROXY_FROM_FILE**  | Использовать-ли прокси из файла `bot/config/proxies.txt` (True / False)                                       |
-| **USE_TAP_BOT**          | Использовать ли тап-бота (True / False)                                                                       |
-| **EMERGENCY_STOP**       | Использовать аварийный стоп (True / False), если True - при ошибке протокола стоп бота, чтобы не получить бан |
-
-## Установка
-Вы можете скачать [**Репозиторий**](https://github.com/shamhi/MemeFiBot) клонированием на вашу систему и установкой необходимых зависимостей:
+## Installation
+You can download [**Repository**](https://github.com/shamhi/MemeFiBot) by cloning it to your system and installing the necessary dependencies:
 ```shell
-~ >>> git clone https://github.com/shamhi/MemeFiBot.git 
+~ >>> git clone https://github.com/shamhi/MemeFiBot.git
 ~ >>> cd MemeFiBot
 
-# Linux
+#Linux
 ~/MemeFiBot >>> python3 -m venv venv
 ~/MemeFiBot >>> source venv/bin/activate
 ~/MemeFiBot >>> pip3 install -r requirements.txt
 ~/MemeFiBot >>> cp .env-example .env
-~/MemeFiBot >>> nano .env  # Здесь вы обязательно должны указать ваши API_ID и API_HASH , остальное берется по умолчанию
+~/MemeFiBot >>> nano .env # Here you must specify your API_ID and API_HASH , the rest is taken by default
 ~/MemeFiBot >>> python3 main.py
 
-# Windows
+#Windows
 ~/MemeFiBot >>> python -m venv venv
 ~/MemeFiBot >>> venv\Scripts\activate
 ~/MemeFiBot >>> pip install -r requirements.txt
 ~/MemeFiBot >>> copy .env-example .env
-~/MemeFiBot >>> # Указываете ваши API_ID и API_HASH, остальное берется по умолчанию
+~/MemeFiBot >>> # Specify your API_ID and API_HASH, the rest is taken by default
 ~/MemeFiBot >>> python main.py
 ```
 
-Также для быстрого запуска вы можете использовать аргументы, например:
+Also for quick launch you can use arguments, for example:
 ```shell
 ~/MemeFiBot >>> python3 main.py --action (1/2)
-# Или
+# Or
 ~/MemeFiBot >>> python3 main.py -a (1/2)
 
-# 1 - Создает сессию
-# 2 - Запускает кликер
+#1 - Create session
+#2 - Run clicker
 ```
