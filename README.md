@@ -3,8 +3,6 @@
 
 ![img1](.github/images/demo.png)
 
-> 🇷🇺 README на русском доступен [здесь](README.md)
-
 ## Functionality
 | Functional                                                     | Supported |
 |----------------------------------------------------------------|:---------:|
@@ -15,8 +13,6 @@
 | Random number of clicks per request                            |     ✅     |
 | Support tdata / pyrogram .session / telethon .session          |     ✅     |
 
-## [Settings](https://github.com/shamhi/MemeFiBot/blob/main/.env-example)
-| Настройка                | Описание                                                                                                                   |
 |--------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | **API_ID / API_HASH**    | Platform data from which to launch a Telegram session (stock - Android)                                                    |
 | **MIN_AVAILABLE_ENERGY** | Minimum amount of available energy, upon reaching which there will be a delay (eg 100)                                     |
@@ -37,10 +33,6 @@
 | **EMERGENCY_STOP**       | Use an emergency stop (True / False), if True - in case of a stop bot protocol error, so as not to get banned (eg [10,25]) |
 
 ## Installation
-You can download [**Repository**](https://github.com/shamhi/MemeFiBot) by cloning it to your system and installing the necessary dependencies:
-```shell
-~ >>> git clone https://github.com/shamhi/MemeFiBot.git
-~ >>> cd MemeFiBot
 
 #Linux
 ~/MemeFiBot >>> python3 -m venv venv
